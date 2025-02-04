@@ -7,8 +7,7 @@
   "dev": "vite",
   "build": "vite build",
   "preview": "vite preview"
-  "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  }, 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Blueavian9/HallPass-Parent-Teacher-Communication-app.git"
