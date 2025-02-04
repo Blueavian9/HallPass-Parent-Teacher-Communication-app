@@ -1,0 +1,34 @@
+{
+  "name": "hallpass-parent-teacher-communication-app",
+  "version": "1.0.0",
+  "description": "Parent Teacher Communication App A scalable full-stack web and mobile app designed to enhance communication between parents and teachers. Features real-time messaging, event scheduling, and progress tracking. Built with modern technologies for seamless user experience, aiming to foster better collaboration in school communities.",
+  "main": "index.js",
+  "scripts": {
+  "dev": "vite",
+  "build": "vite build",
+  "preview": "vite preview"
+  "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blueavian9/HallPass-Parent-Teacher-Communication-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Blueavian9/HallPass-Parent-Teacher-Communication-app/issues"
+  },
+  "homepage": "https://github.com/Blueavian9/HallPass-Parent-Teacher-Communication-app#readme",
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "eslint-plugin-react-hooks": "^4.6.2"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router-dom": "^7.1.5",
+    "vite": "^6.0.11"
+  }
+}
