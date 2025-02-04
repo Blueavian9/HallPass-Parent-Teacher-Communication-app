@@ -35,9 +35,11 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.48.1",
     "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.5",
     "vite": "^6.0.11"
   }
 }
+
