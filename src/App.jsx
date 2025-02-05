@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { supabase } from "./utils/supabaseClient.ts";
-import axios from "axios";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./utils/Home.tsx";
+// import axios from "axios";
 
 export default function App() {
   const [data, setData] = useState([]);
