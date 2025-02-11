@@ -1,14 +1,17 @@
-{
-    "compilerOptions": {}, 
-    "files": [
-        "core.ts",
-        "sys.ts",
-        "types.ts", 
-        "scanner.ts", 
-        "parser.ts", 
-        "utilities", 
-        "blinder.ts",
-        "checker.ts",
-        "tsc.ts"
-    ]
+export type Message = {
+    id: number; 
+    content: string;
+    created_at: string; 
+};
+
+export interface Database {
+    public: {
+        Tables: { 
+            messages: {
+                Row: Message; // Row structure of the message table 
+                Insert: Omit<Message, "id" | "created_at">; // Fields required for inserting a new message
+                Update: Partial<Message>; // Fields that can be updated 
+            };
+        };
+    };
 }

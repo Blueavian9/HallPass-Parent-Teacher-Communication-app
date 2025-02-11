@@ -1,5 +1,7 @@
 import { createClient } from "@supabase/supabase-js";
 import { supabase } from "./utils/supabaseClient.js";
+import { Database } from "./database.types.js";
+
 
 // Load from environment variables
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
