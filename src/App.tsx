@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { supabase } from "./utils/supabaseClient.tsx"; // Fixed path to avoid ".js"
+import { supabase } from "./utils/supabaseClient.js"; // Fixed path to avoid ".js"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./utils/pages/Home";
 
