@@ -7,6 +7,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
+    historyApiFallback: true,
     strictPort: true, // Ensures Vite doesn't switch to another port
     open: true, // Automatically opens the browser when the server starts
   },
