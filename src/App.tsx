@@ -1,8 +1,9 @@
 import React from "react"; // This should fix the error
 import { useEffect, useState } from "react";
-import { supabase } from "./utils/supabaseClient.js"; // Fixed path to avoid ".js"
+import { supabase } from "./utils/pages/Home.js"; // Fixed path to avoid ".js"
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./utils/pages/Home";
+import Home from "./utils/pages/Home.js"; 
+
 
 type Message = {
   id: number;
