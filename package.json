@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/Blueavian9/HallPass-Parent-Teacher-Communication-app#readme",
   "devDependencies": {
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
     "@typescript-eslint/eslint-plugin": "^8.23.0",
     "@typescript-eslint/parser": "^8.23.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
     "eslint": "^8.57.1",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
@@ -36,9 +36,10 @@
     "@supabase/supabase-js": "^2.48.1",
     "axios": "^1.7.9",
     "dotenv": "^16.4.7",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
     "react-router-dom": "^7.1.5",
     "vite": "^6.0.11"
   }
 }
+
