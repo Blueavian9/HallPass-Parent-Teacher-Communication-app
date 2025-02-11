@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { supabase } from "./utils/supabaseClient.tsx";
+import { supabase } from "./utils/supabaseClient.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./utils/pages/Home.tsx";
 import axios from "axios";
