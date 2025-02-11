@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { supabase } from "./utils/supabaseClient.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./utils/pages/Home.tsx";
+import Home from "./utils/Home.tsx";
+
 import axios from "axios";
 
 type Message = {
@@ -29,26 +30,8 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        {/* Home Route */}
         <Route path="/" element={<Home />} />
-
-        {/* Fallback 404 Page */}
-        <Route
-          path="*"
-          element={
-            <div>
-              <h1>404 - Page Not Found</h1>
-            </div>
-          }
-        />
       </Routes>
-
-      <h1>HallPass Parent-Teacher Communication App</h1>
-      <ul>
-        {data.map((message) => (
-          <li key={message.id}>{message.content}</li>
-        ))}
-      </ul>
     </Router>
   );
 }
