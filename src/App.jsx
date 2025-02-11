@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { supabase } from "./utils/supabaseClient.ts";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./utils/Home.tsx";
+// import Home from "./utils/Home.tsx";
 // import axios from "axios";
 
 export default function App() {
