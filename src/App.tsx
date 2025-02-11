@@ -4,8 +4,13 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./utils/pages/Home.tsx";
 import axios from "axios";
 
+type Message = {
+  id: number; 
+  content: string; 
+}
+
 export default function App() {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState<Message []>([]);
 
   useEffect(() => {
     const fetchData = async () => {
