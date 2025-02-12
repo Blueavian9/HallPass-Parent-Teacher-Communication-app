@@ -1,8 +1,8 @@
 import React from "react";
 
 
-function Home() {
-  return <h1>Welcome to HallPass</h1>;
+export default function Home() {
+  return <h1>Welcome to HallPass App</h1>;
 }
 
-export default Home;
+
