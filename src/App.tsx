@@ -1,9 +1,7 @@
-import React from "react"; // This should fix the error
-import { useEffect, useState } from "react";
-import { supabase } from "./utils/pages/Home.js"; // Fixed path to avoid ".js"
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./utils/pages/Home.js"; 
-
+import { supabase } from "./utils/supabaseClient"; // Adjusted import path
+import Home from "./utils/pages/Home"; // Correct import path
 
 type Message = {
   id: number;
@@ -18,8 +16,8 @@ export default function App() {
       try {
         const { data, error } = await supabase.from("messages").select("*");
         if (error) throw error;
-        setData(data);
-      } catch (error) {
+        setData(data || []); // Handle `data` possibly being null
+      } catch (error: any) {
         console.error("Error fetching data:", error.message);
       }
     };
