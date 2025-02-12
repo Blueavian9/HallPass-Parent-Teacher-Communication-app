@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { supabase } from "../supabaseClient"; // Adjusted import path
+import { supabase } from "./supabaseClient"; // Adjusted import path
 import Home from "../Home"; // Correct import path
 
 type Message = {
