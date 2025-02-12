@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import ReactDOM from "react-dom/client";
-import App from "./pages/App";
+import App from "./utils/App";
 
 export default function AppRoutes() {
   return (
