@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { supabase } from "./src/utils/supabaseClient.js"; // Adjusted import path
 import Home from "./src/Home.tsx"; // Correct import path
@@ -14,9 +14,9 @@ export default function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const { data, error } = await supabase.from("messages").select("*");
+        const { data, error } = await supabase.from<Message>("messages").select("*");
         if (error) throw error;
-        setData(data || []); // Handle `data` possibly being null
+        setData(data || []); // Ensures data is not null
       } catch (error: any) {
         console.error("Error fetching data:", error.message);
       }
@@ -28,8 +28,8 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<h1>404 - Page Not Found</h1>} /> 
+        <Route path="/" element={<Home data={data} />} />
+        <Route path="*" element={<h1>404 - Page Not Found</h1>} />
       </Routes>
     </Router>
   );
