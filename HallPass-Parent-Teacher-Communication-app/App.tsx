@@ -1,9 +1,8 @@
-import React,{ useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { supabase } from "./src/utils/supabaseClient.js"; // Adjusted import path
 import Home from "./src/Home.tsx"; // Correct import path
 import { Message } from "./src/database.types.ts";
-
 
 export default function App() {
   const [data, setData] = useState<Message[]>([]);
@@ -12,7 +11,7 @@ export default function App() {
     const fetchData = async () => {
       try {
         const { data, error } = await supabase
-          .from("messages") // Only provide the table name as a string
+          .from("messages") // Only pass the table name as a string
           .select<Message>("*"); // Specify the type here
         if (error) throw error;
         setData(data || []); // Ensures data is not null
@@ -20,11 +19,9 @@ export default function App() {
         console.error("Error fetching data:", error.message);
       }
     };
-  
+
     fetchData();
   }, []);
-  
-  
 
   return (
     <Router>
