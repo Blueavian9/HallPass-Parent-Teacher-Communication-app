@@ -2,19 +2,22 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { supabase } from "./src/utils/supabaseClient.js"; // Adjusted import path
 import Home from "./src/Home.tsx"; // Correct import path
-import { Message } from "./src/database.types.ts";
+import { Database } from "./src/database.types"; // Import the Database interface
+
+// Use the Row type for the messages table
+type Message = Database["public"]["Tables"]["messages"]["Row"];
 
 export default function App() {
-  const [data, setData] = useState<Message[]>([]);
+  const [data, setData] = useState<Message[]>([]); // Use the Message type here
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const { data, error } = await supabase
-          .from("messages") // Only pass the table name as a string
-          .select<Message>("*"); // Specify the type here
+          .from("messages") // Table name is a string
+          .select("*"); // Select only specific fields
         if (error) throw error;
-        setData(data || []); // Ensures data is not null
+        setData(data || []); // Handle potential null values
       } catch (error: any) {
         console.error("Error fetching data:", error.message);
       }
