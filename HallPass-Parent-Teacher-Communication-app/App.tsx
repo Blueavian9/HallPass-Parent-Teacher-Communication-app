@@ -12,8 +12,8 @@ export default function App() {
     const fetchData = async () => {
       try {
         const { data, error } = await supabase
-          .from<Message, null>("messages")
-          .select("*");
+          .from("messages") // Only provide the table name as a string
+          .select<Message>("*"); // Specify the type here
         if (error) throw error;
         setData(data || []); // Ensures data is not null
       } catch (error: any) {
@@ -23,6 +23,7 @@ export default function App() {
   
     fetchData();
   }, []);
+  
   
 
   return (
