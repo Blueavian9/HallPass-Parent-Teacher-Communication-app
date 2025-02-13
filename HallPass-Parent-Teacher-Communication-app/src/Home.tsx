@@ -1,5 +1,8 @@
 import React from "react";
 
+type HomeProps = {
+  data: Message[];
+};
 
 export default function Home({ data }: HomeProps) {
   return (<div>
