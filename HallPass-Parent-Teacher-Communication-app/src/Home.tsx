@@ -13,7 +13,8 @@ const Home: React.FC<HomeProps> = ({ data }) => {
         <li key={message.id}>{message.content}</li>
       ))}
     </ul>
-  </div>); 
+  </div>
+  ); 
 };
 
 export default Home;
