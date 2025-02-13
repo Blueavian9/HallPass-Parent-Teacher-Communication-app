@@ -1,11 +1,11 @@
 import React from "react";
 import { Message } from "./database.types.ts";
 
-type HomeProps = {
+interface HomeProps {
   data: Message[];
-};
+}
 
-export default function Home({ data }: HomeProps) {
+const Home: React.FC<HomeProps> = ({ data }) => {
   return (<div>
     <h1>Welcome to HallPass Homepage App</h1>
     <ul>
@@ -13,7 +13,7 @@ export default function Home({ data }: HomeProps) {
         <li key={message.id}>{message.content}</li>
       ))}
     </ul>
-  </div>);
-}
+  </div>); 
+};
 
-
+export default Home;
