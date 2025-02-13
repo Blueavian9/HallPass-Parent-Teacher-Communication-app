@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { supabase } from "./src/utils/supabaseClient.js"; // Adjusted import path
 import Home from "./src/Home.tsx"; // Correct import path
+import { Message } from "./src/database.types.ts";
 
 
 export default function App() {
