@@ -1,5 +1,5 @@
 import React from "react";
-import { Message } from "./database.types";
+import { Message } from "../database.types";
 
 interface HomeProps {
   data: Message[];

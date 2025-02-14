@@ -16,6 +16,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["src/**/*"], // Include all files in the 'src' directory
+  "include": ["src/**/*", "database.types.ts", "main.tsx", "public/index.ts"], // Include all files in the 'src' directory
   "exclude": ["node_modules", "dist"] // Exclude 'node_modules' and 'dist'
 }

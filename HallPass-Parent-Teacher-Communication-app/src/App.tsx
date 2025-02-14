@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { supabase } from "./src/utils/supabaseClient.js"; // Adjusted import path
-import Home from "./src/Home.tsx"; // Correct import path
-import { Database } from "./src/database.types"; // Import the Database interface
+import { supabase } from "./supabaseClient";
+
+import Home from "./Home.js"; // Correct import path
+import { Database } from "../database.types.js"; // Import the Database interface
 
 // Use the Row type for the messages table
 type Message = Database["public"]["Tables"]["messages"]["Row"];
