@@ -14,7 +14,12 @@ const Home: React.FC<HomeProps> = ({ data }) => {
           {data.map((message) => (
             <li key={message.id}>
               <strong>Message:</strong> {message.content} <br />
-              <small>Created At: {new Date(message.created_at).toLocaleString()}</small>
+              <small>
+                Created At:{" "}
+                {message.created_at
+                  ? new Date(message.created_at).toLocaleString()
+                  : "Unknown"}
+              </small>
             </li>
           ))}
         </ul>

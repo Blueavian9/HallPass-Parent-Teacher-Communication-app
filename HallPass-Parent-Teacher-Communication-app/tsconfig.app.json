@@ -1,21 +1,21 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "lib": ["ES2022", "DOM"], // Use "ES2022" for compatibility and include "DOM" for browser types
+    "lib": ["ES2022", "DOM"], // Include DOM for browser support
     "module": "ESNext",
-    "jsx": "react-jsx", // Ensure React compatibility
-    "strict": true, // Enable all strict type checking
-    "skipLibCheck": true, // Skip type checks of declaration files
-    "esModuleInterop": true, // Enables compatibility with CommonJS and ES Modules
-    "resolveJsonModule": true, // Allows importing JSON modules
+    "jsx": "react-jsx", // Support React JSX
+    "strict": true, // Enable strict type checking
+    "skipLibCheck": true, // Skip type checks for declaration files
+    "esModuleInterop": true, // Compatibility with CommonJS
+    "resolveJsonModule": true, // Support importing JSON
     "moduleResolution": "node", // Use Node-style module resolution
-    "allowSyntheticDefaultImports": true, // Enables default imports for modules without a default export
-    "outDir": "dist", // Specify the output directory for compiled files
-    "baseUrl": ".", // Base directory for resolving non-relative modules
-    "paths": { // Add aliases if necessary
-      "@/*": ["src/*"]
-    }
+    "paths": {
+      "@/*": ["src/*"] // Aliases for cleaner imports
+    },
+    "outDir": "dist", // Output directory for compiled files
+    "baseUrl": ".", // Base directory for module resolution
+    "types": ["react", "node"] // Include React and Node types
   },
-  "include": ["src/**/*", "database.types.ts", "main.tsx", "public/index.ts"], // Include all files in the 'src' directory
-  "exclude": ["node_modules", "dist"] // Exclude 'node_modules' and 'dist'
+  "include": ["src/**/*", "database.types.ts", "src/main.tsx", "public/index.ts"],
+  "exclude": ["node_modules", "dist"]
 }
